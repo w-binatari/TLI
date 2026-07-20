@@ -1,7 +1,6 @@
 /* ============================================================
-   TLI Capps Logistics — StatSwing-inspired edition
-   Design language adapted from statswing.com:
-   navy + gold on white, Outfit (light display), editorial
+   TLI Capps Logistics — site stylesheet
+   Navy + gold on white, Outfit (light display), editorial
    minimalism, hairline rules, generous whitespace, sharp
    corners, understated text-link CTAs.
    ============================================================ */
@@ -70,7 +69,7 @@ img { max-width: 100%; display: block; }
   font-weight: 300;
 }
 
-/* ---------- text-link CTA (StatSwing style) ---------- */
+/* ---------- text-link CTA ---------- */
 .tlink {
   display: inline-flex;
   align-items: center;
@@ -344,34 +343,44 @@ img { max-width: 100%; display: block; }
 }
 .band .wrap { position: relative; z-index: 1; }
 .band .eyebrow { color: var(--gold); }
-.band-quote {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 34px;
-  line-height: 1.35;
-  font-weight: 400;
-  max-width: 780px;
-  margin: 0 0 34px;
+.band--full { padding: 108px 0; }
+.band-head {
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  max-width: 680px;
+  margin: 0 0 56px;
   color: #fff;
 }
-.band-quote em { color: var(--gold); font-style: italic; }
-.band-meta {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  border-top: 1px solid rgba(255,255,255,.16);
-  padding-top: 28px;
+.band-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.18);
 }
-.band-meta div { }
-.band-meta b {
+.band-item {
+  padding: 36px 32px 0 0;
+  border-right: 1px solid rgba(255,255,255,.18);
+}
+.band-item:last-child { border-right: none; padding-right: 0; }
+.band-item:not(:first-child) { padding-left: 32px; }
+.band-item b {
   display: block;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
-.band-meta span { color: rgba(255,255,255,.82); font-size: 15px; font-weight: 300; }
+.band-item p {
+  margin: 0;
+  color: rgba(255,255,255,.85);
+  font-size: 15.5px;
+  line-height: 1.7;
+  font-weight: 300;
+}
 
 /* ============================================================
    COVERAGE
@@ -443,7 +452,23 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   color: var(--ink-70);
 }
-.close-list .v { color: var(--ink); font-weight: 500; }
+.close-list .k.icon-k {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.close-list .cico {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.close-list .cico--svg {
+  color: var(--gold-dark);
+  border-radius: 0;
+}
+.close-list .v { color: var(--ink); font-weight: 500; text-align: right; }
 .close-list .v:hover { color: var(--gold-dark); }
 
 /* ============================================================
@@ -521,6 +546,12 @@ img { max-width: 100%; display: block; }
   .pillars { grid-template-columns: 1fr; }
   .pillar { border-right: none; border-bottom: 1px solid var(--line); padding: 32px 0; }
   .pillar:not(:first-child) { padding-left: 0; }
+  .band-grid { grid-template-columns: 1fr; }
+  .band-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.18); padding: 28px 0; }
+  .band-item:not(:first-child) { padding-left: 0; }
+  .band-item:last-child { border-bottom: none; }
+  .close-list li { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .close-list .v { text-align: left; }
   .ledger-row { grid-template-columns: 40px 1fr; gap: 8px 18px; }
   .ledger-desc { grid-column: 2 / -1; }
   .ledger-go { grid-column: 2 / -1; }
@@ -534,7 +565,8 @@ img { max-width: 100%; display: block; }
   .hero h1 { font-size: 40px; }
   .section-lead h2 { font-size: 30px; }
   .close h2 { font-size: 32px; }
-  .band-quote { font-size: 24px; }
+  .band-head { font-size: 28px; margin-bottom: 40px; }
+  .band--full { padding: 76px 0; }
   .nav { display: none; }
   .nav-toggle { display: inline-flex; }
 }
