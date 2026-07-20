@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" role="img" aria-label="TLI Capps delivery van">
+  <!-- ground shadow -->
+  <ellipse cx="262" cy="288" rx="215" ry="16" fill="#000000" opacity="0.35"/>
+  <!-- cargo body -->
+  <rect x="40" y="94" width="302" height="152" rx="16" fill="#ffffff"/>
+  <!-- cab -->
+  <path d="M342 120 H402 C412 120 421 125 427 133 L472 185 C476 190 478 196 478 203 V246 H342 Z" fill="#ffffff"/>
+  <!-- windshield -->
+  <path d="M358 138 H400 C406 138 411 140 415 145 L446 183 H358 Z" fill="#f4791e"/>
+  <!-- side stripe -->
+  <rect x="40" y="212" width="302" height="18" fill="#f4791e"/>
+  <!-- side wordmark -->
+  <text x="66" y="182" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="48" fill="#111111" letter-spacing="2">TLI CAPPS</text>
+  <!-- front bumper -->
+  <rect x="472" y="236" width="16" height="20" rx="3" fill="#f4791e"/>
+  <!-- headlight -->
+  <rect x="466" y="205" width="12" height="9" rx="2" fill="#f4791e"/>
+  <!-- rear wheel -->
+  <circle cx="140" cy="250" r="34" fill="#111111"/>
+  <circle cx="140" cy="250" r="24" fill="#ffffff"/>
+  <circle cx="140" cy="250" r="12" fill="#111111"/>
+  <circle cx="140" cy="250" r="5" fill="#f4791e"/>
+  <!-- front wheel -->
+  <circle cx="412" cy="250" r="34" fill="#111111"/>
+  <circle cx="412" cy="250" r="24" fill="#ffffff"/>
+  <circle cx="412" cy="250" r="12" fill="#111111"/>
+  <circle cx="412" cy="250" r="5" fill="#f4791e"/>
+</svg>

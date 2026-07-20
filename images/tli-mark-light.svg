@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TLI Capps Logistics">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#ffffff"/>
+  <!-- T crossbar -->
+  <rect x="15" y="18" width="34" height="8" rx="2" fill="#111111"/>
+  <!-- stem -->
+  <rect x="28" y="18" width="8" height="34" rx="2" fill="#111111"/>
+  <!-- L foot -->
+  <rect x="28" y="44" width="17" height="8" rx="2" fill="#111111"/>
+  <!-- i tittle -->
+  <rect x="41" y="8" width="10" height="10" rx="2.5" fill="#f4791e"/>
+</svg>

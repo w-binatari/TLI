@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Car hire">
+  <path d="M4 40 V35 C4 33 5 32 7 31.5 L16 30 L22 23 C24 21 26.5 20 30 20 H38 C42 20 45 21 48 24 L54 30 L58 31 C60 31.5 61 33 61 35 V40 Z" fill="#111111"/>
+  <path d="M25 24 H37 C39 24 40.5 24.6 42 26 L46 30 H25 Z" fill="#f4791e"/>
+  <circle cx="18" cy="41" r="6.5" fill="#111111"/>
+  <circle cx="18" cy="41" r="2.6" fill="#f4791e"/>
+  <circle cx="46" cy="41" r="6.5" fill="#111111"/>
+  <circle cx="46" cy="41" r="2.6" fill="#f4791e"/>
+</svg>
