@@ -7,7 +7,26 @@
   <meta name="description" content="TLI Capps Logistics — delivery, car hire and haulage across Abuja, Lagos, Rivers, Abia and Enugu. Moved by the same drivers and vehicles, from pickup to drop-off." />
   <title>TLI Capps Logistics — Delivery, Hire &amp; Haulage</title>
 
-  <link rel="icon" type="image/svg+xml" href="images/tli-mark-navy.svg" />
+  <!-- Open Graph / Twitter — set absolute URLs to your live domain before launch -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TLI Capps Logistics" />
+  <meta property="og:title" content="TLI Capps Logistics — Delivery, Hire &amp; Haulage" />
+  <meta property="og:description" content="Delivery vans, car hire and haulage across Abuja, Lagos, Rivers, Abia and Enugu. One fleet, planned routes, straight answers." />
+  <meta property="og:url" content="https://YOUR-DOMAIN.example/" />
+  <!-- When final logo / share image is ready, uncomment and point to an absolute URL:
+  <meta property="og:image" content="https://YOUR-DOMAIN.example/images/og-share.jpg" />
+  <meta property="og:image:alt" content="TLI Capps Logistics" />
+  -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="TLI Capps Logistics — Delivery, Hire &amp; Haulage" />
+  <meta name="twitter:description" content="Delivery vans, car hire and haulage across Abuja, Lagos, Rivers, Abia and Enugu. One fleet, planned routes, straight answers." />
+  <!-- When final logo / share image is ready:
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.example/images/og-share.jpg" />
+  -->
+
+  <!-- favicon placeholder — swap for the final TLI Capps logo (e.g. images/favicon.png) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='none' stroke='%231B2A4A' stroke-width='2' stroke-dasharray='4 3'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,17 +39,30 @@
   <header class="head">
     <div class="wrap head-inner">
       <a class="brand" href="index.html">
-        <img src="images/tli-mark-navy.svg" alt="" />
+        <span class="logo-ph" aria-hidden="true">LOGO</span>
         <b>TLI CAPPS <span>LOGISTICS</span></b>
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#why">Why Us</a>
         <a href="#coverage">Coverage</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a class="navcta" href="https://wa.me/2348174841037?text=Hello%20TLI%20Capps%2C%20I%27d%20like%20to%20make%20a%20booking" target="_blank" rel="noopener">Book →</a>
       </nav>
-      <a class="nav-toggle tlink tlink--gold" href="https://wa.me/2348174841037" target="_blank" rel="noopener">Book →</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="nav-drawer" id="navDrawer" hidden>
+      <nav class="nav-drawer-inner" aria-label="Mobile">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="navcta" href="https://wa.me/2348174841037?text=Hello%20TLI%20Capps%2C%20I%27d%20like%20to%20make%20a%20booking" target="_blank" rel="noopener">Book →</a>
+      </nav>
     </div>
   </header>
 
@@ -49,6 +81,7 @@
           </div>
         </div>
         <figure class="hero-figure rv">
+          <!-- Fleet photo placeholder until client provides final imagery -->
           <img src="images/a-truck.jpg" alt="TLI Capps fleet parked and ready" />
           <figcaption class="figure-cap">The Fleet</figcaption>
         </figure>
@@ -85,7 +118,7 @@
     <div class="wrap">
       <div class="section-lead rv">
         <p class="eyebrow">Services</p>
-        <h2>Five ways we can move something for you.</h2>
+        <h2>Five ways we move for you.</h2>
       </div>
       <div class="ledger">
         <div class="ledger-row rv">
@@ -149,7 +182,7 @@
     <div class="wrap">
       <div class="section-lead rv">
         <p class="eyebrow">Coverage</p>
-        <h2>States that we cover.</h2>
+        <h2>Five states we cover.</h2>
       </div>
       <div class="coverage-grid rv">
         <div class="coverage-cell">
@@ -176,6 +209,49 @@
     </div>
   </section>
 
+  <!-- ===== about (scaffold — awaiting client bios / photos) ===== -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-lead rv">
+        <p class="eyebrow">About Us</p>
+        <h2>The people behind the work.</h2>
+        <p class="lede about-lede">Company story and bios will sit here once provided. Until then, these slots mark where the owner and management team belong.</p>
+      </div>
+      <div class="about-grid">
+        <article class="about-slot rv">
+          <div class="about-photo" aria-hidden="true">
+            <span>Photo</span>
+          </div>
+          <div class="about-meta">
+            <p class="about-role">Owner</p>
+            <h3>Name forthcoming</h3>
+            <p>Short bio and focus areas — placeholder until client copy arrives.</p>
+          </div>
+        </article>
+        <article class="about-slot rv">
+          <div class="about-photo" aria-hidden="true">
+            <span>Photo</span>
+          </div>
+          <div class="about-meta">
+            <p class="about-role">Management</p>
+            <h3>Name forthcoming</h3>
+            <p>Role title and a few lines on responsibilities — placeholder.</p>
+          </div>
+        </article>
+        <article class="about-slot rv">
+          <div class="about-photo" aria-hidden="true">
+            <span>Photo</span>
+          </div>
+          <div class="about-meta">
+            <p class="about-role">Management</p>
+            <h3>Name forthcoming</h3>
+            <p>Role title and a few lines on responsibilities — placeholder.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== close / contact ===== -->
   <section class="close" id="contact">
     <div class="wrap">
@@ -184,7 +260,7 @@
           <p class="eyebrow">Get in touch</p>
           <h2>Got something to move?</h2>
           <p class="lede">Tell us what it is and where it is going.</p>
-          <div style="margin-top:32px">
+          <div class="close-cta">
             <a class="tlink" href="https://wa.me/2348174841037?text=Hello%20TLI%20Capps%2C%20I%27d%20like%20to%20make%20a%20booking" target="_blank" rel="noopener">
               Message us on WhatsApp <span class="arw">→</span>
             </a>
@@ -193,28 +269,28 @@
         <ul class="close-list rv">
           <li>
             <span class="k icon-k">
-              <img class="cico" src="images/ic-contact-phone.jpg" alt="" />
+              <img class="cico cico--svg" src="images/ic-phone.svg" alt="" width="20" height="20" />
               Phone
             </span>
             <a class="v" href="tel:+2348174841037">+234 817 484 1037</a>
           </li>
           <li>
             <span class="k icon-k">
-              <img class="cico" src="images/ic-contact-email.jpg" alt="" />
+              <img class="cico cico--svg" src="images/ic-mail.svg" alt="" width="20" height="20" />
               Email
             </span>
             <a class="v" href="mailto:tlicapss@gmail.com">tlicapss@gmail.com</a>
           </li>
           <li>
             <span class="k icon-k">
-              <img class="cico" src="images/ic-contact-whatsapp.jpg" alt="" />
+              <img class="cico cico--svg" src="images/ic-whatsapp.svg" alt="" width="20" height="20" />
               WhatsApp
             </span>
             <a class="v" href="https://wa.me/2348174841037" target="_blank" rel="noopener">+234 817 484 1037</a>
           </li>
           <li>
             <span class="k icon-k">
-              <img class="cico" src="images/ic-contact-hours.jpg" alt="" />
+              <img class="cico cico--svg" src="images/ic-hours.svg" alt="" width="20" height="20" />
               Hours
             </span>
             <span class="v">09:00am &ndash; 07:00pm</span>
@@ -229,12 +305,13 @@
     <div class="wrap">
       <div class="foot-top">
         <a class="brand" href="index.html">
-          <img src="images/tli-mark-navy.svg" alt="" />
+          <span class="logo-ph" aria-hidden="true">LOGO</span>
           <b>TLI CAPPS <span>LOGISTICS</span></b>
         </a>
         <div class="foot-links">
           <div class="foot-col">
             <h5>Company</h5>
+            <a href="#about">About</a>
             <a href="#why">Why Us</a>
             <a href="#coverage">Coverage</a>
             <a href="#contact">Contact</a>
@@ -261,13 +338,52 @@
 
   <script>
     (function () {
+      /* scroll reveals */
       var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       var els = [].slice.call(document.querySelectorAll(".rv"));
-      if (reduce || !("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
-      var io = new IntersectionObserver(function (ents) {
-        ents.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-      }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
-      els.forEach(function (e) { io.observe(e); });
+      if (reduce || !("IntersectionObserver" in window)) {
+        els.forEach(function (e) { e.classList.add("in"); });
+      } else {
+        var io = new IntersectionObserver(function (ents) {
+          ents.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        els.forEach(function (e) { io.observe(e); });
+      }
+
+      /* mobile nav */
+      var toggle = document.getElementById("navToggle");
+      var drawer = document.getElementById("navDrawer");
+      if (!toggle || !drawer) return;
+
+      function setOpen(open) {
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        toggle.classList.toggle("is-open", open);
+        document.body.classList.toggle("nav-open", open);
+        if (open) {
+          drawer.removeAttribute("hidden");
+        } else {
+          drawer.setAttribute("hidden", "");
+        }
+      }
+
+      toggle.addEventListener("click", function () {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+
+      drawer.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () { setOpen(false); });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") setOpen(false);
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.matchMedia("(min-width: 621px)").matches) setOpen(false);
+      });
     })();
   </script>
 </body>
