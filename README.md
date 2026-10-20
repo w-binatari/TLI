@@ -23,9 +23,23 @@ No build step. Open `index.html` locally, or deploy the folder as a static site.
 
 Upload the whole folder (`index.html`, `css/`, `images/`) so those paths stay relative. Examples: GitHub Pages, Cloudflare Pages, shared hosting.
 
+## Brand assets
+
+Organised under `images/brand/`:
+
+| File | Use |
+|------|-----|
+| `logo-horizontal.png` | Header (light background) |
+| `logo-horizontal-on-dark.png` | Footer |
+| `logo-mark.png` / `logo-mark-on-dark.png` | Stacked mark + name |
+| `logo-icon.png` / `logo-icon-on-dark.png` | Icon only |
+| `favicon.png` | Browser favicon |
+| `ceo.jpg` | About — Mr. Emmanuel Oturu |
+| `source/` | Untouched originals as supplied |
+
+Hero fleet photo: `images/hero-fleet.jpg`.
+
 ## Before go-live
 
 - Replace `YOUR-DOMAIN.example` in Open Graph / Twitter meta (`index.html`) with the live URL.
-- Uncomment `og:image` / `twitter:image` once a share image exists (do not use the flyer JPG as a logo).
-- Swap logo placeholders (`.logo-ph`) and the favicon for the final brand mark.
-- Swap CEO photo placeholder when a final portrait is available.
+- Confirm phone / WhatsApp numbers and hours with the client if anything changes.

@@ -13,20 +13,14 @@
   <meta property="og:title" content="TLI CAPSS — Logistics, M&amp;E &amp; Training" />
   <meta property="og:description" content="Reliable logistics, transportation, M&amp;E, business development, and training from Port Harcourt, Rivers State, Nigeria." />
   <meta property="og:url" content="https://YOUR-DOMAIN.example/" />
-  <!-- When final logo / share image is ready, uncomment and point to an absolute URL:
-  <meta property="og:image" content="https://YOUR-DOMAIN.example/images/og-share.jpg" />
+  <meta property="og:image" content="https://YOUR-DOMAIN.example/images/brand/logo-mark.png" />
   <meta property="og:image:alt" content="TLI CAPSS" />
-  -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="TLI CAPSS — Logistics, M&amp;E &amp; Training" />
   <meta name="twitter:description" content="Reliable logistics, transportation, M&amp;E, business development, and training from Port Harcourt, Rivers State, Nigeria." />
-  <!-- When final logo / share image is ready:
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://YOUR-DOMAIN.example/images/og-share.jpg" />
-  -->
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.example/images/brand/logo-mark.png" />
 
-  <!-- favicon placeholder — swap for the final TLI CAPSS logo (e.g. images/favicon.png) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='none' stroke='%231B2A4A' stroke-width='2' stroke-dasharray='4 3'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="images/brand/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -39,8 +33,7 @@
   <header class="head">
     <div class="wrap head-inner">
       <a class="brand" href="index.html">
-        <span class="logo-ph" aria-hidden="true">LOGO</span>
-        <b>TLI CAPSS</b>
+        <img class="brand-logo" src="images/brand/logo-horizontal.png" alt="TLI CAPSS" width="220" height="49" />
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
@@ -48,7 +41,7 @@
         <a href="#clients">Clients</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a class="navcta" href="https://wa.me/2348174841037?text=Hello%20TLI%20CAPSS%2C%20I%27d%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener">Enquire →</a>
+        <a class="navcta" href="#contact">Book →</a>
       </nav>
       <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Open menu">
         <span class="nav-toggle-bars" aria-hidden="true"></span>
@@ -61,7 +54,7 @@
         <a href="#clients">Clients</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a class="navcta" href="https://wa.me/2348174841037?text=Hello%20TLI%20CAPSS%2C%20I%27d%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener">Enquire →</a>
+        <a class="navcta" href="#contact">Book →</a>
       </nav>
     </div>
   </header>
@@ -70,21 +63,31 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
-        <div class="hero-copy rv">
-          <p class="eyebrow">Port Harcourt · Rivers State</p>
-          <h1>Driven by purpose, <em>powered by service.</em></h1>
-          <p class="lede">TLI CAPSS is a registered social enterprise providing reliable logistics, transportation, monitoring and evaluation, business development, and training services.</p>
-          <div class="hero-actions">
-            <a class="tlink" href="https://wa.me/2348174841037?text=Hello%20TLI%20CAPSS%2C%20I%27d%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener">
-              Enquire on WhatsApp <span class="arw">→</span>
-            </a>
-          </div>
-        </div>
         <figure class="hero-figure rv">
-          <!-- Fleet photo placeholder until client provides final imagery -->
-          <img src="images/a-truck.jpg" alt="TLI CAPSS logistics fleet ready for deployment" />
-          <figcaption class="figure-cap">On the road</figcaption>
+          <img src="images/hero-fleet.jpg" alt="TLI CAPSS delivery van, car hire sedan, and passenger vehicle" width="1024" height="512" />
         </figure>
+        <div class="hero-copy rv">
+          <p class="eyebrow">Professionally Delivered</p>
+          <h1>Safe, Timely and Effective Delivery</h1>
+          <p class="lede">Reliable transportation and logistics solutions for individuals and businesses. From delivery vans and car hire to haulage and transportation, we help you move people and goods safely and efficiently. Based in Port Harcourt.</p>
+          <div class="hero-services">
+            <p class="hero-services-label">Our Services</p>
+            <ul>
+              <li>Delivery Vans</li>
+              <li>Car Hire Services</li>
+              <li>Logistics and Haulage</li>
+              <li>Transportation</li>
+              <li>Contractors</li>
+            </ul>
+          </div>
+          <div class="hero-actions">
+            <a class="tlink" href="#contact">Book Now <span class="arw">→</span></a>
+          </div>
+          <ul class="hero-contact">
+            <li><a href="mailto:tlicapss@gmail.com">tlicapss@gmail.com</a></li>
+            <li><a href="tel:+2348174841037">+234 817 484 1037</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -110,6 +113,10 @@
           <p>From logistics runs to M&amp;E reporting, we focus on accountability and outcomes that clients can see, track, and trust.</p>
         </div>
       </div>
+      <figure class="fleet-callout rv">
+        <img src="images/a-truck.jpg" alt="TLI CAPSS truck ready for haulage" width="600" height="487" />
+        <figcaption class="figure-cap">On the road</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -213,9 +220,9 @@
       </div>
       <div class="about-grid about-grid--duo">
         <article class="about-slot rv">
-          <div class="about-photo" aria-hidden="true">
-            <span>Photo</span>
-          </div>
+          <figure class="about-photo about-photo--filled">
+            <img src="images/brand/ceo.jpg" alt="Mr. Emmanuel Oturu, Founder and Managing Director of TLI CAPSS" width="776" height="1024" />
+          </figure>
           <div class="about-meta">
             <p class="about-role">Founder and Managing Director</p>
             <h3>Mr. Emmanuel Oturu</h3>
@@ -299,8 +306,7 @@
     <div class="wrap">
       <div class="foot-top">
         <a class="brand" href="index.html">
-          <span class="logo-ph" aria-hidden="true">LOGO</span>
-          <b>TLI CAPSS</b>
+          <img class="brand-logo brand-logo--foot" src="images/brand/logo-horizontal-on-dark.png" alt="TLI CAPSS" width="220" height="49" />
         </a>
         <div class="foot-links">
           <div class="foot-col">

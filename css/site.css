@@ -113,24 +113,17 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 12px;
 }
-.brand img { width: 34px; height: 34px; }
-/* logo placeholder — swap the .logo-ph span for the final logo <img> */
-.logo-ph {
-  width: 34px;
-  height: 34px;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px dashed var(--ink-70);
-  border-radius: 5px;
-  font-size: 7.5px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: var(--ink-70);
-  text-transform: uppercase;
+.brand-logo {
+  display: block;
+  height: 42px;
+  width: auto;
+  max-width: min(220px, 52vw);
+  object-fit: contain;
 }
-.foot .logo-ph { border-color: rgba(255, 255, 255, .4); color: rgba(255, 255, 255, .6); }
+.brand-logo--foot {
+  height: 46px;
+  max-width: min(240px, 70vw);
+}
 .brand b {
   font-weight: 600;
   font-size: 15px;
@@ -228,10 +221,10 @@ img { max-width: 100%; display: block; }
 body.nav-open { overflow: hidden; }
 
 /* ============================================================
-   HERO
+   HERO — fleet image left, copy right (desktop)
    ============================================================ */
 .hero {
-  padding: 118px 0 96px;
+  padding: 100px 0 88px;
   border-bottom: 1px solid var(--line);
   position: relative;
   overflow: hidden;
@@ -239,52 +232,110 @@ body.nav-open { overflow: hidden; }
 .hero .wrap { position: relative; z-index: 1; }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
   align-items: center;
 }
 .hero h1 {
-  font-size: 62px;
+  font-size: 48px;
   font-weight: 300;
   letter-spacing: -0.02em;
-  line-height: 1.04;
-  margin: 0 0 28px;
+  line-height: 1.08;
+  margin: 0 0 22px;
+  max-width: 18ch;
 }
 .hero h1 em {
   font-style: normal;
   color: var(--gold);
 }
-.hero .lede { max-width: 520px; margin: 0 0 40px; }
+.hero .lede { max-width: 480px; margin: 0 0 28px; font-size: 17px; }
+.hero-services { margin: 0 0 28px; }
+.hero-services-label {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.hero-services ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+  max-width: 420px;
+}
+.hero-services li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.hero-services li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+}
 .hero-actions {
   display: flex;
   gap: 32px;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 22px;
 }
-/* hero figure — a single restrained photo, sharp cornered */
+.hero-contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+.hero-contact a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-70);
+  letter-spacing: 0.02em;
+}
+.hero-contact a:hover { color: var(--gold-dark); }
 .hero-figure {
   position: relative;
+  margin: 0;
+  isolation: isolate;
 }
 .hero-figure img {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 420px;
-  object-fit: cover;
-  filter: grayscale(.15) contrast(1.02);
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 .hero-figure::after {
   content: "";
   position: absolute;
-  left: -14px; bottom: -14px;
-  width: 92px; height: 92px;
+  left: -14px;
+  bottom: -14px;
+  width: 92px;
+  height: 92px;
   background: var(--gold);
-  z-index: -0; /* sits behind via order */
+  z-index: 0;
 }
-.hero-figure { isolation: isolate; }
-.hero-figure img { position: relative; z-index: 1; }
 .figure-cap {
   position: absolute;
   z-index: 2;
-  left: 0; bottom: 0;
+  left: 0;
+  bottom: 0;
   background: var(--ink);
   color: #fff;
   font-size: 11px;
@@ -292,6 +343,33 @@ body.nav-open { overflow: hidden; }
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 10px 16px;
+}
+
+/* Former hero caption — under pillars */
+.fleet-callout {
+  position: relative;
+  margin: 56px 0 0;
+  max-width: 420px;
+  isolation: isolate;
+}
+.fleet-callout img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(.12) contrast(1.02);
+}
+.fleet-callout::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  bottom: -12px;
+  width: 72px;
+  height: 72px;
+  background: var(--gold);
+  z-index: 0;
 }
 
 /* ============================================================
@@ -607,7 +685,8 @@ body.nav-open { overflow: hidden; }
   justify-content: center;
   border: 1px dashed var(--ink-70);
   background: var(--mist);
-  margin-bottom: 22px;
+  margin: 0 0 22px;
+  overflow: hidden;
 }
 .about-photo span {
   font-size: 11px;
@@ -615,6 +694,17 @@ body.nav-open { overflow: hidden; }
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--ink-70);
+}
+.about-photo--filled {
+  border: none;
+  display: block;
+}
+.about-photo--filled img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
 }
 .about-role {
   margin: 0 0 8px;
@@ -706,8 +796,12 @@ body.nav-open { overflow: hidden; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 940px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 44px; }
-  .hero-figure img { height: 320px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero-figure { order: -1; }
+  .hero-figure img { max-height: 280px; height: auto; }
+  .hero-figure::after { width: 64px; height: 64px; left: -10px; bottom: -10px; }
+  .hero h1 { max-width: none; font-size: 40px; }
+  .hero-services ul { grid-template-columns: 1fr; }
   .close-grid { grid-template-columns: 1fr; gap: 40px; }
   .pillars { grid-template-columns: 1fr; }
   .pillar { border-right: none; border-bottom: 1px solid var(--line); padding: 32px 0; }
@@ -740,7 +834,10 @@ body.nav-open { overflow: hidden; }
 @media (max-width: 620px) {
   .wrap { padding: 0 20px; }
   .hero { padding: 72px 0 60px; }
-  .hero h1 { font-size: 40px; }
+  .hero h1 { font-size: 34px; }
+  .hero-contact { flex-direction: column; gap: 6px; }
+  .fleet-callout { max-width: none; }
+  .fleet-callout img { height: 220px; }
   .section-lead h2 { font-size: 30px; }
   .close h2 { font-size: 32px; }
   .band-head { font-size: 28px; margin-bottom: 40px; }
