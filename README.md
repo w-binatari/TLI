@@ -1,4 +1,4 @@
-# TLI Capps Logistics — website
+# TLI CAPSS — website
 
 Static single-page site: `index.html`, `css/site.css`, and `images/`.
 
@@ -28,5 +28,4 @@ Upload the whole folder (`index.html`, `css/`, `images/`) so those paths stay re
 - Replace `YOUR-DOMAIN.example` in Open Graph / Twitter meta (`index.html`) with the live URL.
 - Uncomment `og:image` / `twitter:image` once a share image exists (do not use the flyer JPG as a logo).
 - Swap logo placeholders (`.logo-ph`) and the favicon for the final brand mark.
-- Confirm WhatsApp / phone / hours with the client (current values are provisional).
-- Fill About Us names, bios, and photos.
+- Swap CEO photo placeholder when a final portrait is available.
