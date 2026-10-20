@@ -1,5 +1,5 @@
 /* ============================================================
-   TLI Capps Logistics — site stylesheet
+   TLI CAPSS — site stylesheet
    Navy + gold on white, Outfit (light display), editorial
    minimalism, hairline rules, generous whitespace, sharp
    corners, understated text-link CTAs.
@@ -557,14 +557,26 @@ body.nav-open { overflow: hidden; }
 }
 .close-cta { margin-top: 32px; }
 .close-list .v { color: var(--ink); font-weight: 500; text-align: right; }
-.close-list .v:hover { color: var(--gold-dark); }
+.close-list a.v:hover,
+.close-list .v a:hover { color: var(--gold-dark); }
+.contact-nowrap {
+  white-space: nowrap;
+}
+.contact-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+.contact-stack a { color: inherit; }
+.foot-col .contact-nowrap { display: block; }
 
 /* ============================================================
-   ABOUT — scaffold placeholders
+   ABOUT
    ============================================================ */
 .about-lede {
   margin: 22px 0 0;
-  max-width: 540px;
+  max-width: 640px;
 }
 .about-grid {
   display: grid;
@@ -572,12 +584,20 @@ body.nav-open { overflow: hidden; }
   gap: 0;
   border-top: 1px solid var(--line);
 }
+.about-grid--duo {
+  grid-template-columns: 1fr 1fr;
+}
 .about-slot {
   padding: 40px 28px 8px 0;
   border-right: 1px solid var(--line);
 }
 .about-slot:last-child { border-right: none; padding-right: 0; }
 .about-slot:not(:first-child) { padding-left: 28px; }
+.about-slot--copy {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
 .about-photo {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -696,7 +716,8 @@ body.nav-open { overflow: hidden; }
   .band-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.18); padding: 28px 0; }
   .band-item:not(:first-child) { padding-left: 0; }
   .band-item:last-child { border-bottom: none; }
-  .about-grid { grid-template-columns: 1fr; }
+  .about-grid,
+  .about-grid--duo { grid-template-columns: 1fr; }
   .about-slot {
     border-right: none;
     border-bottom: 1px solid var(--line);
@@ -704,9 +725,11 @@ body.nav-open { overflow: hidden; }
   }
   .about-slot:not(:first-child) { padding-left: 0; }
   .about-slot:last-child { border-bottom: none; }
+  .about-slot--copy { align-items: flex-start; }
   .about-photo { max-height: 320px; }
   .close-list li { flex-direction: column; align-items: flex-start; gap: 6px; }
   .close-list .v { text-align: left; }
+  .contact-stack { align-items: flex-start; }
   .ledger-row { grid-template-columns: 40px 1fr; gap: 8px 18px; }
   .ledger-desc { grid-column: 2 / -1; }
   .ledger-go { grid-column: 2 / -1; }
