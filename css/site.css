@@ -15,6 +15,10 @@
   --line: #e2ded7;
   --display: "Syne", "Outfit", system-ui, sans-serif;
   --body: "Outfit", system-ui, -apple-system, sans-serif;
+  /* ~120% visual density at 100% browser zoom */
+  --wrap-max: 1344px;
+  --gutter: 36px;
+  --header-h: 88px;
 }
 
 * { box-sizing: border-box; }
@@ -24,11 +28,12 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--body);
+  font-size: 18px;
   color: var(--ink);
   background:
     radial-gradient(1100px 420px at 8% -8%, rgba(227, 27, 35, 0.035), transparent 55%),
     linear-gradient(180deg, #fff 0%, var(--paper) 42%, var(--paper) 100%);
-  line-height: 1.6;
+  line-height: 1.55;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -39,15 +44,15 @@ img { max-width: 100%; display: block; }
 
 .wrap {
   width: 100%;
-  max-width: 1120px;
+  max-width: var(--wrap-max);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 var(--gutter);
 }
 
 /* ---------- shared type ---------- */
 .lede {
-  font-size: 19px;
-  line-height: 1.7;
+  font-size: 22px;
+  line-height: 1.65;
   color: var(--ink-70);
   font-weight: 300;
 }
@@ -57,7 +62,7 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: .2px;
   color: var(--ink);
@@ -84,7 +89,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 78px;
+  height: var(--header-h);
 }
 .brand {
   display: flex;
@@ -93,19 +98,19 @@ img { max-width: 100%; display: block; }
 }
 .brand-logo {
   width: auto;
-  height: 40px;
+  height: 46px;
 }
 .brand-logo--foot {
-  height: 36px;
+  height: 42px;
   width: auto;
 }
 .nav {
   display: flex;
-  gap: 28px;
+  gap: 32px;
   align-items: center;
 }
 .nav a {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--ink-70);
   transition: color .2s ease;
@@ -166,9 +171,9 @@ img { max-width: 100%; display: block; }
 }
 .nav-drawer-inner a {
   display: block;
-  padding: 14px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--ink-70);
 }
@@ -186,7 +191,7 @@ body.nav-open { overflow: hidden; }
    HERO
    ============================================================ */
 .hero {
-  padding: 56px 0 0;
+  padding: 64px 0 0;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
@@ -196,31 +201,31 @@ body.nav-open { overflow: hidden; }
   grid-template-areas:
     "copy figure"
     "trust trust";
-  column-gap: 40px;
+  column-gap: 48px;
   align-items: center;
 }
-.hero-copy { grid-area: copy; padding-bottom: 40px; }
+.hero-copy { grid-area: copy; padding-bottom: 44px; }
 .hero h1 {
   font-family: var(--display);
-  font-size: clamp(30px, 3.5vw, 44px);
+  font-size: clamp(36px, 4.2vw, 52px);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.08;
-  margin: 0 0 18px;
+  line-height: 1.06;
+  margin: 0 0 20px;
   color: var(--ink);
 }
 .hero .lede {
-  font-size: 18px;
-  max-width: 460px;
-  margin: 0 0 26px;
+  font-size: 21px;
+  max-width: 520px;
+  margin: 0 0 28px;
 }
-.hero-services { margin: 0 0 26px; }
+.hero-services { margin: 0 0 28px; }
 .hero-services-title {
   font-family: var(--display);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 0;
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   color: var(--ink);
 }
 .hero-services ul {
@@ -229,13 +234,13 @@ body.nav-open { overflow: hidden; }
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  gap: 8px 36px;
+  gap: 10px 40px;
 }
 .hero-services li {
-  font-size: 15.5px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--ink-soft);
-  padding-left: 16px;
+  padding-left: 18px;
   position: relative;
   white-space: nowrap;
 }
@@ -253,10 +258,10 @@ body.nav-open { overflow: hidden; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 15px 26px;
+  padding: 17px 30px;
   background: var(--ink);
   color: #fff;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: .01em;
   transition: background .25s ease, gap .25s ease;
@@ -276,7 +281,7 @@ body.nav-open { overflow: hidden; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--ink-soft);
 }
 .hero-contact svg { color: var(--ink-70); flex-shrink: 0; }
@@ -285,8 +290,8 @@ body.nav-open { overflow: hidden; }
 .hero-figure {
   grid-area: figure;
   position: relative;
-  margin: 0 -32px 0 -56px;
-  padding-bottom: 40px;
+  margin: 0 -36px 0 -64px;
+  padding-bottom: 44px;
 }
 .hero-figure::before {
   content: "";
@@ -327,9 +332,9 @@ body.nav-open { overflow: hidden; }
   flex-wrap: wrap;
   gap: 8px 24px;
   margin: 0;
-  padding: 22px 0;
+  padding: 24px 0;
   border-top: 1px solid var(--line);
-  font-size: 15px;
+  font-size: 17px;
   color: var(--ink-70);
 }
 .hero-trust strong { color: var(--ink); font-weight: 600; }
@@ -337,19 +342,19 @@ body.nav-open { overflow: hidden; }
 /* ============================================================
    SECTIONS
    ============================================================ */
-.section { padding: 96px 0; border-bottom: 1px solid var(--line); }
+.section { padding: 108px 0; border-bottom: 1px solid var(--line); }
 .section--mist { background: var(--mist); }
 .section-lead {
-  max-width: 640px;
+  max-width: 720px;
   margin-bottom: 56px;
 }
 .section-lead h2,
 .close h2 {
   font-family: var(--display);
-  font-size: clamp(32px, 4vw, 44px);
+  font-size: clamp(38px, 4.6vw, 52px);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.08;
+  line-height: 1.06;
   margin: 0;
 }
 
@@ -359,22 +364,22 @@ body.nav-open { overflow: hidden; }
   border-top: 1px solid var(--line);
 }
 .pillar {
-  padding: 44px 34px 44px 0;
+  padding: 48px 36px 48px 0;
   border-right: 1px solid var(--line);
 }
 .pillar:last-child { border-right: none; padding-right: 0; }
-.pillar:not(:first-child) { padding-left: 34px; }
+.pillar:not(:first-child) { padding-left: 36px; }
 .pillar h3 {
   font-family: var(--display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 650;
   margin: 0 0 14px;
 }
 .pillar p {
   margin: 0;
   color: var(--ink-70);
-  font-size: 15.5px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 /* ============================================================
@@ -383,10 +388,10 @@ body.nav-open { overflow: hidden; }
 .ledger { border-top: 1px solid var(--ink); }
 .ledger-row {
   display: grid;
-  grid-template-columns: 64px 1fr 1.4fr auto;
+  grid-template-columns: 72px 1fr 1.4fr auto;
   gap: 28px;
   align-items: baseline;
-  padding: 30px 0;
+  padding: 34px 0;
   border-bottom: 1px solid var(--line);
   transition: background .25s ease, padding .25s ease;
 }
@@ -397,22 +402,22 @@ body.nav-open { overflow: hidden; }
 }
 .ledger-no {
   font-family: var(--display);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--accent);
 }
 .ledger-name {
   font-family: var(--display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
 }
 .ledger-desc {
   color: var(--ink-70);
-  font-size: 15.5px;
-  line-height: 1.65;
+  font-size: 18px;
+  line-height: 1.6;
 }
 .ledger-go {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -431,12 +436,12 @@ body.nav-open { overflow: hidden; }
 .service-feature-media { margin: 0; }
 .service-feature-media img {
   width: 100%;
-  height: 320px;
+  height: 380px;
   object-fit: cover;
 }
 .service-feature-copy h3 {
   font-family: var(--display);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -445,8 +450,8 @@ body.nav-open { overflow: hidden; }
 .service-feature-copy p:last-child {
   margin: 0;
   color: var(--ink-70);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 /* ============================================================
@@ -454,7 +459,7 @@ body.nav-open { overflow: hidden; }
    ============================================================ */
 .quote-band {
   position: relative;
-  min-height: 420px;
+  min-height: 480px;
   display: flex;
   align-items: center;
   color: #fff;
@@ -478,18 +483,18 @@ body.nav-open { overflow: hidden; }
 .quote-band-inner {
   position: relative;
   z-index: 1;
-  padding: 96px 32px;
+  padding: 108px var(--gutter);
 }
 .quote-band blockquote {
   margin: 0;
-  max-width: 760px;
+  max-width: 880px;
 }
 .quote-band blockquote p {
   font-family: var(--display);
-  font-size: clamp(28px, 4.2vw, 44px);
+  font-size: clamp(32px, 4.8vw, 52px);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.15;
+  line-height: 1.12;
   margin: 0;
 }
 .quote-band blockquote p::before {
@@ -502,7 +507,7 @@ body.nav-open { overflow: hidden; }
 }
 .quote-meta {
   margin: 28px 0 0;
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255,255,255,.78);
 }
 
@@ -519,11 +524,11 @@ body.nav-open { overflow: hidden; }
 .clients-lead {
   margin-bottom: 0;
   position: sticky;
-  top: 102px; /* clear sticky header (78px) + breathing room */
+  top: calc(var(--header-h) + 24px);
   align-self: start;
 }
 .clients-scroll {
-  max-height: min(62vh, 440px);
+  max-height: min(62vh, 520px);
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
@@ -547,10 +552,10 @@ body.nav-open { overflow: hidden; }
 }
 .client-list li {
   font-family: var(--display);
-  font-size: clamp(22px, 2.6vw, 28px);
+  font-size: clamp(26px, 3vw, 34px);
   font-weight: 600;
   letter-spacing: -0.02em;
-  padding: 18px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--line);
 }
 .client-list li:last-child {
@@ -562,11 +567,11 @@ body.nav-open { overflow: hidden; }
    ============================================================ */
 .about-lede {
   margin: 22px 0 0;
-  max-width: 640px;
+  max-width: 720px;
 }
 .about-ceo {
   display: grid;
-  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
   gap: 56px;
   align-items: center;
   padding-top: 8px;
@@ -578,22 +583,22 @@ body.nav-open { overflow: hidden; }
 }
 .about-role {
   margin: 0 0 10px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--accent);
 }
 .about-meta h3 {
   margin: 0 0 16px;
   font-family: var(--display);
-  font-size: clamp(28px, 3.2vw, 36px);
+  font-size: clamp(32px, 3.6vw, 42px);
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.1;
 }
 .about-meta p:last-child {
   margin: 0;
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 19px;
+  line-height: 1.65;
   color: var(--ink-70);
   max-width: 52ch;
 }
@@ -602,21 +607,21 @@ body.nav-open { overflow: hidden; }
   padding-top: 40px;
   border-top: 1px solid var(--ink);
   display: grid;
-  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
   gap: 56px;
   align-items: start;
 }
 .about-approach h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 .about-approach p {
   margin: 0;
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 19px;
+  line-height: 1.65;
   color: var(--ink-70);
   max-width: 62ch;
 }
@@ -624,21 +629,21 @@ body.nav-open { overflow: hidden; }
 /* ============================================================
    CONTACT
    ============================================================ */
-.close { padding: 104px 0; }
+.close { padding: 120px 0; }
 .close-grid {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 64px;
   align-items: end;
 }
-.close .lede { max-width: 460px; }
+.close .lede { max-width: 520px; }
 .close-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .close-list li {
-  padding: 18px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
@@ -646,7 +651,7 @@ body.nav-open { overflow: hidden; }
 }
 .close-list li:first-child { border-top: 1px solid var(--line); }
 .close-list .k {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--ink-70);
   flex-shrink: 0;
@@ -671,7 +676,7 @@ body.nav-open { overflow: hidden; }
 .foot {
   background: var(--ink);
   color: rgba(255,255,255,.7);
-  padding: 54px 0 30px;
+  padding: 64px 0 34px;
 }
 .foot-top {
   display: flex;
@@ -689,7 +694,7 @@ body.nav-open { overflow: hidden; }
 }
 .foot-col h5 {
   font-family: var(--display);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -699,7 +704,7 @@ body.nav-open { overflow: hidden; }
 .foot-col a {
   display: block;
   color: rgba(255,255,255,.72);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   margin-bottom: 10px;
   transition: color .2s ease;
@@ -712,7 +717,7 @@ body.nav-open { overflow: hidden; }
   flex-wrap: wrap;
   gap: 10px;
   padding-top: 24px;
-  font-size: 12.5px;
+  font-size: 14px;
   color: rgba(255,255,255,.5);
 }
 .foot-credit { color: rgba(255,255,255,.35); }
@@ -747,7 +752,7 @@ body.nav-open { overflow: hidden; }
   }
   .pillar:not(:first-child) { padding-left: 0; }
   .service-feature { grid-template-columns: 1fr; gap: 24px; }
-  .service-feature-media img { height: 260px; }
+  .service-feature-media img { height: 280px; }
   .clients-layout { grid-template-columns: 1fr; gap: 32px; align-items: start; }
   .clients-layout .section-lead,
   .clients-lead {
@@ -771,13 +776,25 @@ body.nav-open { overflow: hidden; }
   .ledger-go { grid-column: 2 / -1; }
 }
 @media (max-width: 620px) {
-  .wrap { padding: 0 20px; }
+  :root {
+    --gutter: 20px;
+    --header-h: 72px;
+  }
+  body { font-size: 17px; }
+  .wrap { padding: 0 var(--gutter); }
   .nav { display: none; }
   .nav-toggle { display: inline-flex; }
   .nav-drawer:not([hidden]) { display: block; }
-  .brand-logo { height: 34px; }
-  .hero { padding: 48px 0 0; }
+  .brand-logo { height: 36px; }
+  .hero { padding: 40px 0 0; }
+  .hero h1 { font-size: clamp(30px, 8.5vw, 40px); }
+  .hero .lede { font-size: 18px; }
   .hero-services ul { gap: 8px 24px; }
-  .quote-band-inner { padding: 72px 20px; }
+  .hero-services li { white-space: normal; }
+  .quote-band-inner { padding: 72px var(--gutter); }
   .section { padding: 72px 0; }
+  .section-lead h2,
+  .close h2 { font-size: clamp(30px, 8vw, 40px); }
+  .client-list li { font-size: clamp(22px, 6.5vw, 28px); padding: 16px 0; }
+  .close { padding: 80px 0; }
 }
