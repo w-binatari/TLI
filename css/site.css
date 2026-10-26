@@ -511,16 +511,39 @@ body.nav-open { overflow: hidden; }
    ============================================================ */
 .clients-layout {
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 48px;
-  align-items: end;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 48px 64px;
+  align-items: start;
 }
-.clients-layout .section-lead { margin-bottom: 0; }
+.clients-layout .section-lead,
+.clients-lead {
+  margin-bottom: 0;
+  position: sticky;
+  top: 102px; /* clear sticky header (78px) + breathing room */
+  align-self: start;
+}
+.clients-scroll {
+  max-height: min(62vh, 440px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  border-top: 1px solid var(--ink);
+  padding-right: 8px;
+}
+.clients-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.clients-scroll::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 0;
+}
+.clients-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
 .client-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 1px solid var(--ink);
 }
 .client-list li {
   font-family: var(--display);
@@ -529,6 +552,9 @@ body.nav-open { overflow: hidden; }
   letter-spacing: -0.02em;
   padding: 18px 0;
   border-bottom: 1px solid var(--line);
+}
+.client-list li:last-child {
+  border-bottom: none;
 }
 
 /* ============================================================
@@ -723,6 +749,17 @@ body.nav-open { overflow: hidden; }
   .service-feature { grid-template-columns: 1fr; gap: 24px; }
   .service-feature-media img { height: 260px; }
   .clients-layout { grid-template-columns: 1fr; gap: 32px; align-items: start; }
+  .clients-layout .section-lead,
+  .clients-lead {
+    position: static;
+    top: auto;
+  }
+  .clients-scroll {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+    scrollbar-gutter: auto;
+  }
   .about-ceo,
   .about-approach { grid-template-columns: 1fr; gap: 28px; }
   .about-photo { max-width: 380px; }
