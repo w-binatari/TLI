@@ -787,18 +787,14 @@ body.nav-open { overflow: hidden; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: var(--display);
-  font-size: calc(var(--tli) * .2);
-  font-weight: 400;
-  font-variation-settings: "opsz" 72;
-  letter-spacing: -0.01em;
-  line-height: .9;
+  font-family: var(--mark);
+  font-size: calc(var(--tli) * .19);
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: .78;
   white-space: nowrap;
-  color: var(--ink);
-  padding-left: clamp(22px, 3vw, 52px);
-  border-left: 1px solid var(--line);
+  color: var(--logo-red);
 }
-.ghero-full span:nth-child(2) { color: var(--ink-70); }
 .ghero-lede { max-width: 600px; margin: 52px 0 0; }
 
 /* ventures: one flush row, divided like the page beneath */
@@ -1297,8 +1293,6 @@ body.nav-open { overflow: hidden; }
 @media (max-width: 620px) {
   .ghero { padding: 44px 0 56px; }
   .ghero-mark { --tli: 18.5vw; gap: 14px; }
-  .ghero-full { letter-spacing: -0.02em; }
-  .ghero-full { padding-left: 16px; border-left-width: 2px; }
   .ghero-lede { margin-top: 32px; font-size: 18px; }
   .vboxes { grid-template-columns: 1fr; margin-top: 44px; }
   .vbox + .vbox { border-left: 0; border-top: 1px solid var(--line); }
