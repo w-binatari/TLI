@@ -770,6 +770,7 @@ body.nav-open { overflow: hidden; }
   --tli: clamp(96px, 15.5vw, 236px);
   display: flex;
   align-items: stretch;
+  justify-content: center;
   gap: clamp(22px, 3vw, 52px);
   margin: 0;
   font-weight: inherit;
@@ -795,7 +796,7 @@ body.nav-open { overflow: hidden; }
   white-space: nowrap;
   color: var(--logo-red);
 }
-.ghero-lede { max-width: 600px; margin: 52px 0 0; }
+.ghero-lede { max-width: 600px; margin: 52px auto 0; text-align: center; }
 
 /* ventures: one flush row, divided like the page beneath */
 .vboxes {
