@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Page not found | TLI CAPSS</title>
+
+  <!-- Paths are absolute so this page keeps its styles at any missing URL depth. -->
+  <link rel="icon" type="image/png" href="/images/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400..700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="/css/site.css" rel="stylesheet" />
+  <style>
+    .nf .phead { position: relative; overflow: hidden; }
+    .nf .phead h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .nf-num {
+      position: absolute;
+      right: var(--gutter);
+      bottom: -0.18em;
+      margin: 0;
+      font-family: var(--mark);
+      font-weight: 700;
+      font-size: clamp(120px, 22vw, 300px);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      opacity: .05;
+      pointer-events: none;
+      user-select: none;
+    }
+    .nf-cta { display: flex; flex-wrap: wrap; gap: 18px 36px; margin-top: 40px; }
+    .nf-more { padding: 72px 0 112px; }
+    .nf-more .vboxes { margin-top: 0; }
+    .nf-more .vbox > a { min-height: 196px; }
+    @media (max-width: 620px) {
+      .nf-num { display: none; }
+      .nf-more { padding: 48px 0 72px; }
+    }
+  </style>
+</head>
+
+<body class="nf">
+
+  <header class="head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/images/brand/logo-horizontal.png" alt="TLI CAPSS" width="220" height="49" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#ventures">Ventures</a>
+        <a href="/#gew">GEW 2026</a>
+        <a href="/#about">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/#contact">Contact</a>
+        <a class="navcta" href="/#contact">Enquire →</a>
+      </nav>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="nav-drawer" id="navDrawer" hidden>
+      <nav class="nav-drawer-inner" aria-label="Mobile">
+        <a href="/#ventures">Ventures</a>
+        <a href="/#gew">GEW 2026</a>
+        <a href="/#about">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/#contact">Contact</a>
+        <a class="navcta" href="/#contact">Enquire →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="phead">
+      <p class="nf-num" aria-hidden="true">404</p>
+      <div class="wrap">
+        <p class="eyebrow">Error 404 · Page not found</p>
+        <h1>This page took a <em>wrong turn.</em></h1>
+        <p class="lede">The link may be out of date, or the address has a typo. Let us get you back on the road.</p>
+        <div class="nf-cta">
+          <a class="tlink" href="/">Back to the homepage <span class="arw">→</span></a>
+          <a class="tlink" href="https://wa.me/2348174841037?text=Hello%20TLI%20CAPSS%2C%20I%27d%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener">Message us on WhatsApp <span class="arw">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="nf-more" aria-labelledby="nf-more-title">
+      <div class="wrap">
+        <h2 class="eyebrow" id="nf-more-title">Or go straight to</h2>
+        <ul class="vboxes">
+          <li class="vbox vbox--link">
+            <a href="/gew-2026">
+              <span class="vbox-kind">Programme</span>
+              <span class="vbox-name">GEW 2026</span>
+              <span class="vbox-desc">Global Entrepreneurship Week across the South-South and South-East.</span>
+              <span class="vbox-go">See the week <span class="arw">→</span></span>
+            </a>
+          </li>
+          <li class="vbox vbox--link">
+            <a href="/logistics">
+              <span class="vbox-kind">Subsidiary</span>
+              <span class="vbox-name">TLI Logistics</span>
+              <span class="vbox-desc">Delivery vans, car hire, haulage and transportation.</span>
+              <span class="vbox-go">Visit <span class="arw">→</span></span>
+            </a>
+          </li>
+          <li class="vbox vbox--link">
+            <a href="/gallery">
+              <span class="vbox-kind">Archive</span>
+              <span class="vbox-name">Gallery</span>
+              <span class="vbox-desc">Moments from years of TLI programmes and partnerships.</span>
+              <span class="vbox-go">Look back <span class="arw">→</span></span>
+            </a>
+          </li>
+          <li class="vbox vbox--link">
+            <a href="/#contact">
+              <span class="vbox-kind">Reach us</span>
+              <span class="vbox-name">Contact</span>
+              <span class="vbox-desc">Projects, partnerships, training or transport.</span>
+              <span class="vbox-go">Get in touch <span class="arw">→</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-top">
+        <a class="brand" href="/">
+          <img class="brand-logo brand-logo--foot" src="/images/brand/logo-horizontal-on-dark.png" alt="TLI CAPSS" width="220" height="49" />
+        </a>
+        <div class="foot-links">
+          <div class="foot-col">
+            <h5>TLI CAPSS</h5>
+            <a href="/#about">About</a>
+            <a href="/#services">What we do</a>
+            <a href="/gew-2026">GEW 2026</a>
+            <a href="/gallery">Gallery</a>
+          </div>
+          <div class="foot-col">
+            <h5>Ventures</h5>
+            <a href="/logistics">TLI Logistics</a>
+            <a href="/#ventures">Errand Boy</a>
+            <a href="/#ventures">Values, Ethics &amp; Leadership</a>
+          </div>
+          <div class="foot-col">
+            <h5>Reach</h5>
+            <a class="contact-nowrap" href="tel:+2348063323788">+234 806 332 3788</a>
+            <a class="contact-nowrap" href="tel:+2348174841037">+234 817 484 1037</a>
+            <a class="contact-nowrap" href="mailto:tlicapss@gmail.com">tlicapss@gmail.com</a>
+            <a href="https://www.instagram.com/tliconceptservices/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 TLI Concept and Project Support Services. All rights reserved.</span>
+        <span class="foot-credit">Supporting road photos via Pexels</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/site.js" defer></script>
+</body>
+
+</html>
